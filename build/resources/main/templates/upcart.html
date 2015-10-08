@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="utf-8">
+
+</head>
+<!--/head-->
+
+<body>
+
+                        <center>
+                            <table border="2" width="1000px" cellpadding="20px" style="border-collapse: collapse">
+
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>PRICE</th>
+
+                                </tr>
+
+                                <tr th:each="product : ${cartproductlist}">
+                                    <td> <p th:text="${product.name}">Easy Polo Black Edition</p></td>
+                                    <td> <p th:text="${product.id}">Product ID</p></td>
+
+                                </tr>
+
+                            </table>
+                        </center>
+
+
+</body>
+</html>
